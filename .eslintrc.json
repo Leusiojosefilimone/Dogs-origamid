@@ -18,6 +18,12 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "linebreak-style":"off"
+        "linebreak-style":"off",
+        "react/prop-types":"off",
+        "no-unused-vars":"off",
+        "react/jsx-props-no-spreading":"off",
+        "no-console":"off",
+        "no-shadow":"off",
+        "no-useless-escape":"off"
     }
 }

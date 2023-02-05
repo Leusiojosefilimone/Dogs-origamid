@@ -24,6 +24,9 @@
         "react/jsx-props-no-spreading":"off",
         "no-console":"off",
         "no-shadow":"off",
-        "no-useless-escape":"off"
+        "no-useless-escape":"off",
+        "react/jsx-pascal-case":"off",
+        "import/prefer-default-export": "off",
+        "react/jsx-no-constructed-context-values":"off"
     }
 }

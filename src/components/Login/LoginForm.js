@@ -9,12 +9,11 @@ import { UserContext } from '../../UserContext';
 function LoginForm() {
   const username = useForm();
   const password = useForm();
-  const { userlogin } = useContext(UserContext);
+  const { userLogin, error, loading } = useContext(UserContext);
   async function handleSubmit(event) {
     event.preventDefault();
-
     if (username.validate() && password.validate()) {
-      userlogin(username.value, password.value);
+      userLogin(username.value, password.value);
     }
   }
   return (
@@ -23,7 +22,8 @@ function LoginForm() {
       <form action="" onSubmit={handleSubmit}>
         <Input label="Name" name="username" type="text" {...username} />
         <Input label="Password" name="password" type="password" {...password} />
-        <Button>Entrar</Button>
+        {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
+        {error && <p>{error}</p> }
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </div>

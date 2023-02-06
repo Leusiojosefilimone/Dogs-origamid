@@ -18,7 +18,18 @@ export function USER_GET(token) {
     options: {
       method: 'GET',
       headers: {
-        authorization: `Bearer${token}`,
+        authorization: `Bearer ${token}`,
+      },
+    },
+  };
+}
+export function TOKEN_VALIDATE_POST(token) {
+  return {
+    url: `${API_URL}jwt-auth/v1/token/validate`,
+    options: {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${token}`,
       },
     },
   };

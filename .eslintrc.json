@@ -27,6 +27,7 @@
         "no-useless-escape":"off",
         "react/jsx-pascal-case":"off",
         "import/prefer-default-export": "off",
-        "react/jsx-no-constructed-context-values":"off"
+        "react/jsx-no-constructed-context-values":"off",
+        "react/button-has-type":"off"
     }
 }

@@ -22,7 +22,6 @@ function UserStorage({ children }) {
     setError(null);
     setLoading(false);
     setLogin(false);
-    console.log('olá');
     window.localStorage.removeItem('token');
     navigate('/login');
   }, [navigate]);

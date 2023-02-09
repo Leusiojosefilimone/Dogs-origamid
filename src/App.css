@@ -79,10 +79,10 @@ p{
    }
 
  }
- .active{
+.active{
    background: white;
+   border-color: #fb1; 
    box-shadow: 0 0 0 3px  #fea;
-   border-color: #fb1;
 }
 .active svg > *{
    fill: #fb1;

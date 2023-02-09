@@ -28,6 +28,8 @@
         "react/jsx-pascal-case":"off",
         "import/prefer-default-export": "off",
         "react/jsx-no-constructed-context-values":"off",
-        "react/button-has-type":"off"
+        "react/button-has-type":"off",
+        "no-unsafe-finally": "off",
+        "no-else-return":"off"
     }
 }

@@ -5,6 +5,11 @@ const types = {
     regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
     msg: 'preencha um email valido',
   },
+  password: {
+    regex: /^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/,
+    msg: 'Asenha deve possuir no mínimo 8 caracteres, pelomenos 1 letra maiúscula, 1 minúscula, e um digito',
+  },
+
 };
 const useForm = (type) => {
   const [value, setValue] = React.useState('');
@@ -25,9 +30,9 @@ const useForm = (type) => {
 
   function onChange({ target }) {
     if (Error) {
-      console.log(Error);
       validate(value);
     }
+
     setValue(target.value);
   }
 

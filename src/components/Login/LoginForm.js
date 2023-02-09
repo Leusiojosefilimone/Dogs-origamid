@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './LoginForm.module.css';
 import stylesBtn from '../form/Button.module.css';
-
 import useForm from '../../Hooks/useForm';
 import Button from '../form/Button';
 import Input from '../form/Input';
@@ -27,15 +26,13 @@ function LoginForm() {
         <Input label="Password" name="password" type="password" {...password} />
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
         <Error erro={error} />
-        {error && <p>{error}</p> }
       </form>
-      <Link to="/login/perdeu" className={styles.perdeu}>Pereu a senha?</Link>
+      <Link to="/login/perdeu" className={styles.perdeu}>Perdeu a senha?</Link>
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadatre-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site</p>
         <Link className={stylesBtn.button} to="/login/criar">Cadastro</Link>
       </div>
-
     </div>
   );
 }

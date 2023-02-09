@@ -9,7 +9,7 @@
     width: 100%;
     font-size: 1rem;
     padding: 0.4rem;
-    border-radius: #eee;
+    border-radius: .5rem;
     background: #eee;
     transition: .2s;
 }

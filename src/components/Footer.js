@@ -6,5 +6,4 @@ function Footer() {
     <div className={styles.footer}>footer</div>
   );
 }
-
 export default Footer;

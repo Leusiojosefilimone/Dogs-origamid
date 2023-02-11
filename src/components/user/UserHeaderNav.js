@@ -16,6 +16,7 @@ function UserHeaderNav() {
   React.useEffect(() => {
     setMobileMenu(false);
   }, [pathname]);
+
   return (
     <>
       {mobile && (
@@ -26,18 +27,31 @@ function UserHeaderNav() {
       />
       )}
       <nav className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu && styles.navMobileActive}`}>
-        <NavLink to="/conta" end>
+        <NavLink
+          to="/conta"
+          className={(e) => (e.isActive ? `${styles.active}` : undefined)}
+          end
+        >
           <MinhasFotos />
           {mobile && 'minhas Fotos'}
         </NavLink>
-        <NavLink to="/conta/estatisticas">
+        <NavLink
+          to="/conta/estatisticas"
+          className={({ isActive }) => (isActive ? `${styles.active}` : undefined)}
+        >
           <Estatisticas />
           {mobile && 'Estatisticas'}
         </NavLink>
-        <NavLink to="/conta/postar">
+        <NavLink
+          to="/conta/postar"
+          className={
+          (e) => (e.isActive ? `${styles.active}` : undefined)
+}
+        >
           <AdicionarFoto />
           {mobile && 'Adicionar foto'}
         </NavLink>
+
         <button onClick={userLogout}>
           <Sair />
           {mobile && 'Sair'}

@@ -9,7 +9,10 @@ const types = {
     regex: /^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/,
     msg: 'Asenha deve possuir no mínimo 8 caracteres, pelomenos 1 letra maiúscula, 1 minúscula, e um digito',
   },
-
+  number: {
+    regex: /^\d+$/,
+    msg: 'utilize apenas numeros',
+  },
 };
 const useForm = (type) => {
   const [value, setValue] = React.useState('');

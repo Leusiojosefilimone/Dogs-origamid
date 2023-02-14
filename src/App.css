@@ -28,6 +28,7 @@ p{
  }
  img{
     display: block;
+    max-width: 100%;
     font-size: 1rem;
  }
  button,
@@ -41,6 +42,9 @@ p{
     max-width: 50rem;
     padding: 0 1rem;
     margin: 0 auto;
+ }
+ .mainContainer{
+   margin-top: 4rem;
  }
  a{
     text-decoration: none;

@@ -68,3 +68,39 @@ export function PHOTOS_GET({ page, total, user }) {
     },
   };
 }
+export function PHOTO_GET(id) {
+  return {
+    url: `${API_URL}api/photo/${id}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+
+    },
+  };
+}
+export function COMMENT_POST(id, body) {
+  return {
+    url: `${API_URL}api/comment/${id}`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${window.localStorage.getItem('token')}`,
+      },
+      body: JSON.stringify(body),
+    },
+
+  };
+}
+export function PHOTO_DELETE(id) {
+  return {
+    url: `${API_URL}api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        authorization: `Bearer ${window.localStorage.getItem('token')}`,
+      },
+    },
+
+  };
+}

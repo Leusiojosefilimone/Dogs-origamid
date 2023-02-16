@@ -6,7 +6,7 @@ import Loading from '../helper/Loading';
 import useFetch from '../../Hooks/useFetch';
 import { PHOTOS_GET } from '../../Api';
 
-function FeedPhotos() {
+function FeedPhotos({ setModalPhoto }) {
   const {
     data, loading, request, error,
   } = useFetch();
@@ -23,7 +23,13 @@ function FeedPhotos() {
   if (data) {
     return (
       <ul className={`${styles.feed} animeLeft`}>
-        {data.map((photo) => <FeedPhotoItem key={photo.id} photo={photo} />)}
+        {data.map((photo) => (
+          <FeedPhotoItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
+        ))}
       </ul>
     );
   } else return null;

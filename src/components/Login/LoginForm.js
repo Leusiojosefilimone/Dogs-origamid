@@ -27,7 +27,7 @@ function LoginForm() {
         <Input label="Name" name="username" type="text" {...username} />
         <Input label="Password" name="password" type="password" {...password} />
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
-        <Error erro={error} />
+        <Error erro={error && 'Dados incorretos'} />
       </form>
       <Link to="/login/perdeu" className={styles.perdeu}>Perdeu a senha?</Link>
       <div className={styles.cadastro}>
